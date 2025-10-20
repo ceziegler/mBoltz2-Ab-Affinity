@@ -45,7 +45,7 @@ def prepare_protein_complex(datapoint_id: str, proteins: List[Protein], input_di
     # will add contact constraints to the input_dict
 
     # Example: predict 5 structures
-    cli_args = ["--diffusion_samples", "5", "--use_potentials", "--write_embeddings", "--recycling_steps","3"]
+    cli_args = ["--diffusion_samples", "10","--override", "--write_embeddings", "--recycling_steps","5"]
     return [(input_dict, cli_args)]
 
 def prepare_protein_ligand(datapoint_id: str, protein: Protein, ligands: list[SmallMolecule], input_dict: dict, msa_dir: Optional[Path] = None) -> List[tuple[dict, List[str]]]:
